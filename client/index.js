@@ -1,14 +1,11 @@
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import React from 'react';
-import './styles/styles.css';
-import TestFetch from './components/TestFetch';
+import App from './App';
 
-const App = () => {
-  return  (
-    <div>
-    <h1>I promise this is an actual react component and it updates when I save</h1>
-    <TestFetch title='Hello World'/>
-    </div>
-  );
-};
-ReactDOM.render(<App />, document.getElementById('app'));
+render(
+  <div id="maincontainer">
+    <h1>Backcountry Log</h1>
+    <App />
+  </div>,
+  document.getElementById('app')
+);
