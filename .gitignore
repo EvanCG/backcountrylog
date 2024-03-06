@@ -1,0 +1,5 @@
+/* Don't want to track node_modules */
+node_modules/
+
+/* don't want to track the build folder */
+build/
