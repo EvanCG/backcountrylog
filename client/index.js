@@ -6,8 +6,8 @@ import TestFetch from './components/TestFetch';
 const App = () => {
   return  (
     <div>
-    <h1>I promise this is an actual real and it updates when I save</h1>
-    <TestFetch />
+    <h1>I promise this is an actual react component and it updates when I save</h1>
+    <TestFetch title='Hello World'/>
     </div>
   );
 };

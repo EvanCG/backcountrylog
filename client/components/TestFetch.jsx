@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const TestFetch = (props) => {
   const [names, setNames] = useState(null);
@@ -25,7 +25,7 @@ const TestFetch = (props) => {
 
   return (
     <div id="testComponent">
-      <p>This is the testComponent now named .jsx</p>
+      <p>This is the testComponent now named .jsx with a prop title of: {props.title}</p>
       <ul>
         {mapsArray}
       </ul>
