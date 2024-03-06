@@ -3,3 +3,6 @@ node_modules/
 
 /* don't want to track the build folder */
 build/
+
+/* Don't need to upload the coverage test files */
+coverage/
