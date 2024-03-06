@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './styles/styles.css';
-import TestFetch from './components/TestFetch';
 import ConditionsHeader from './components/ConditionsHeader';
 import ConditionsContainer from './containers/ConditionsContainer';
 
@@ -34,7 +33,7 @@ const App = () => {
     <div>
       <h1>Backcountry Log</h1>
       <ConditionsHeader />
-      <ConditionsContainer />
+      <ConditionsContainer conditions={CONDITIONS} />
     </div>
   );
 };

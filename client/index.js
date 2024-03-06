@@ -1,11 +1,7 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import App from './App';
 
-render(
-  <div id="maincontainer">
-    <h1>Backcountry Log</h1>
-    <App />
-  </div>,
-  document.getElementById('app')
-);
+const container = document.getElementById('app');
+const root = createRoot(container);
+root.render(<App />);
