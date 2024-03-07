@@ -4,7 +4,7 @@ const ConditionsHeader = ({ addCondition }) => {
   return (
     <div id="conditionsheader">
       <div id="leftheader">
-        <h1>Conditions</h1>
+        <h1>Backcountry Conditions</h1>
         <p>
           As the season goes on, track conditions and monitor for updates. Build
           a habit to stay familiar with snowpack and how it is evolving.
