@@ -26,7 +26,7 @@ const DateAreaSelector = ({
             name="date"
             id="dateinput"
             value={conditionDate}
-            onChange={() => changeDate()}
+            onChange={changeDate}
           />
         </div>
         <div className="labelgroup">
@@ -35,7 +35,7 @@ const DateAreaSelector = ({
             id="area"
             name="area"
             value={area}
-            onChange={() => changeArea()}
+            onChange={changeArea}
           >
             <option disabled value="select">
               -- Select Area --

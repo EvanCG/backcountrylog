@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProblemSelector from './ProblemSelector';
 import AspectSelector from './AspectSelector';
 import LikelihoodSelector from './LikelihoodSelector';
@@ -8,6 +8,15 @@ const ProblemModal = ({problems, setProblems }) => {
   const [problem, setProblem] = useState(null);
   const [aspect, setAspect] = useState(new AspectCreator());
   const [likelihood, setLikelihood] = useState('select');
+
+  const [disabledSave, setdisabledSave] = useState(true);
+
+  useEffect(() => {
+    if (problem !== null && likelihood !== 'select' && Object.keys(aspect).some((key) => aspect[key])) {
+      setdisabledSave(false);
+    }
+  }, [problem, aspect, likelihood])
+
 
   /* Shows the modal */
   const openModal = () => {
@@ -86,7 +95,7 @@ const ProblemModal = ({problems, setProblems }) => {
                 Cancel
               </a>
             </div>
-            <button id="saveProblem" onClick={() => saveModal()}>
+            <button id="saveProblem" disabled={disabledSave} onClick={() => saveModal()}>
               Save
             </button>
           </div>
