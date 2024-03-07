@@ -8,7 +8,7 @@ const App = () => {
 
   // STATE GOES HERE
   // Are we actively adding a new condition?
-  let addingCondition = false;
+  let addingCondition = true;
   // What is the set of conditions we should currently display for this user?
   const CONDITIONS = [
     {
