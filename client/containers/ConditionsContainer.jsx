@@ -31,7 +31,7 @@ const ConditionsContainer = (props) => {
         </thead>
         <tbody>{conditionsRows}</tbody>
       </table>
-      <button className="addcondition">Add Condition</button>
+      <button className="addcondition" onClick={props.addCondition}>Add Condition</button>
     </div>
   );
 };
