@@ -22,7 +22,7 @@ const App = () => {
       notes: 'Pretty awesome day to send it!',
     },
     {
-      date: 'March 5th, 2024',
+      date: 'Mar 5th, 2024',
       area: "Steven's Pass",
       problems: [
         {
@@ -36,7 +36,7 @@ const App = () => {
       notes: 'Look out for sasquatch',
     },
     {
-      date: 'March 5th, 2024',
+      date: 'Mar 5th, 2024',
       area: 'West Slopes Central',
       problems: [
         { name: 'Storm Slab', likelihood: 'Certain', aspect: 'All Aspects' },
