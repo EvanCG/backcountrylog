@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ConditionsHeader = (props) => {
+const ConditionsHeader = ({ addCondition }) => {
   return (
     <div id="conditionsheader">
       <div id="leftheader">
@@ -11,7 +11,9 @@ const ConditionsHeader = (props) => {
         </p>
       </div>
       <div>
-        <button className="addcondition">Add Condition</button>
+        <button className="addcondition" onClick={addCondition}>
+          Add Condition
+        </button>
       </div>
     </div>
   );

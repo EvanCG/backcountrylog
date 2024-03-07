@@ -6,8 +6,6 @@ import AvalancheProblemsContainer from './AvalancheProblemsContainer';
 import Notes from '../components/Notes';
 
 const AddCondition = (props) => {
-
-
   // Logic to conditionally display the add new problem screens
   const [conditionDate, setConditionDate] = useState('');
   const [area, setArea] = useState('select');
@@ -19,9 +17,19 @@ const AddCondition = (props) => {
     'select',
   ]);
   const [notes, setNotes] = useState('');
+  const [saveState, setSaveState] = useState(true);
 
+  /* Checks if we have entered all of the required fields, and if so, enbles the save button */
+  useEffect(() => {
+    if(conditionDate !== '' && area !== 'select' && notes != '' && hazards.every((element) => element !== 'select')) {
+      setSaveState(false);
+    }
+  },[conditionDate, area, hazards, notes])
+
+
+
+  // grab all of the state in newCondition, and call props.saveAdd
   const addNewCondition = () => {
-    // grab all of the state in newCondition, and call props.saveAdd
 
     // Format the date to be more attractive (thanks chatgpt for some help!)
     const getDaySuffix = (day) => {
@@ -98,7 +106,7 @@ const AddCondition = (props) => {
             Cancel
           </a>
         </div>
-        <button onClick={() => addNewCondition()}>Save</button>
+        <button className="savebutton" disabled={saveState} onClick={() => addNewCondition()}>Save</button>
       </div>
     </div>
   );

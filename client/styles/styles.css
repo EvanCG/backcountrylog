@@ -54,6 +54,10 @@ button:hover {
   background-color: #3b82f6; /* Tailwind blue 500 */
 }
 
+button:disabled {
+  background-color: #dbeafe; /* Tailwind blue 100 */
+}
+
 /* ******************** */
 
 /* Table styles

@@ -18,7 +18,7 @@ const ConditionsContainer = (props) => {
 
   return (
     <div id="conditionscontainer">
-      <ConditionsHeader />
+      <ConditionsHeader addCondition={props.addCondition}/>
       <table>
         <thead>
           <tr id="headerrow">
