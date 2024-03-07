@@ -140,7 +140,7 @@ const AddCondition = (props) => {
       <hr></hr>
       <AvalancheProblemsContainer />
       <hr></hr>
-      <Notes />
+      <Notes notes={notes} setNotes={setNotes}/>
       <hr></hr>
       <div id="addconditionfooter" className="cancelbuttoncombo">
         <div>
