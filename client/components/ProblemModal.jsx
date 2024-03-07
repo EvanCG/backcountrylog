@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import ProblemSelector from './ProblemSelector';
 import AspectSelector from './AspectSelector';
 import LikelihoodSelector from './LikelihoodSelector';
+import AspectCreator from './aspectObject';
 
 const ProblemModal = (props) => {
   
   const [problem, setProblem] = useState(null);
+  const [aspect, setAspect] = useState(new AspectCreator());
+  const [likelihood, setLikelihood] = useState('select');
   
   /* Shows the modal */
   const openModal = () => {
@@ -29,6 +32,20 @@ const ProblemModal = (props) => {
     setProblem(problemId);
   }
 
+  const selectLikelihood = (likelihood) => {
+    setLikelihood(likelihood);
+  }
+
+  const selectAspect = (clickedAspect) => {
+    // copy current aspect
+    let newAspect = JSON.parse(JSON.stringify(aspect));
+    // swap the boolean at the new aspect
+    newAspect.store[clickedAspect] = !newAspect.store[clickedAspect];
+    setAspect(newAspect);
+  }
+
+  console.log('This is the aspect object: ', aspect);
+
   return (
     <div>
       <button id="addaproblem" onClick={() => openModal()}>
@@ -39,8 +56,8 @@ const ProblemModal = (props) => {
           <div id="mainModal">
             <h3>Add Avalanche Problem</h3>
             <ProblemSelector selectProblem={selectProblem} problem={problem}/>
-            <AspectSelector />
-            <LikelihoodSelector />
+            <AspectSelector selectAspect={selectAspect} aspect={aspect}/>
+            <LikelihoodSelector selectLikelihood={selectLikelihood} likelihood={likelihood}/>
           </div>
           <div id="addproblemfooter" className="cancelbuttoncombo">
             <div>

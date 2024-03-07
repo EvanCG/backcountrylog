@@ -276,7 +276,17 @@ dialog {
 }
 
 .problemselection {
-  background-color: #e5e7eb; /* tailwind gray 200 */
+  background-color: #d1d5db; /* tailwind gray 300 */
+}
+
+
+path {
+  fill: transparent;
+}
+
+/* If selected, make it colored */
+.aspectselection {
+  fill: #d1d5db; /* tailwind gray 300 */
 }
 
 #dryloose {

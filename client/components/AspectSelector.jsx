@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AspectSelector = (props) => {
+
+
+  useEffect(() => {
+    for(const path in props.aspect.store) {
+      const currPath = document.querySelector(`path[data-id="${path}"]`);
+
+      // add onclick for each
+      currPath.onclick = () => {
+        props.selectAspect(path);
+      }
+      if (props.aspect.store[path]) {
+        // currPath.style.fill = '#e5e7eb'; /* tailwind gray 200 */
+        currPath.classList.add('aspectselection');
+      } else {
+        currPath.classList.remove('aspectselection');
+      }
+    }
+  }, [props.aspect]);
+
+
+  
+
+
+
   return (
     <div>
       <h4>On what aspect and elevation is the problem occuring?</h4>
@@ -29,7 +53,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -38,7 +61,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -47,7 +69,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -56,7 +77,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -65,7 +85,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -74,7 +93,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -83,7 +101,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -92,7 +109,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -101,7 +117,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -110,7 +125,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -119,7 +133,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -128,7 +141,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -137,7 +149,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -146,7 +157,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -155,7 +165,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -164,7 +173,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -173,7 +181,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -182,7 +189,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -191,7 +197,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -200,7 +205,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -209,7 +213,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -218,7 +221,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -227,7 +229,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
             <path
@@ -236,7 +237,6 @@ const AspectSelector = (props) => {
               style={{
                 stroke: '#1f2937',
                 strokeWidth: '10px',
-                fill: 'transparent',
               }}
             ></path>
           </svg>
