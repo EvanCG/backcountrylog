@@ -11,6 +11,11 @@ body {
 }
 
 
+#appcontainer {
+  margin: 2.5%;
+  padding: 2.5%;
+}
+
 h1 {
   color: #030712; /* Tailwind gray 950 */
   margin: 0;
@@ -62,6 +67,7 @@ td {
   color: #6b7280; /* tailwind gray 500 */
   padding-top: 1em;
   padding-bottom: 1em;
+  font-size: 1.25vw;
 }
 
 .firstcolumn {
@@ -94,13 +100,6 @@ tbody {
 
 /* ******************** */
 
-
-#appcontainer {
-  margin: 2.5%;
-  padding: 2.5%;
-}
-
-
 /* Conditions Header */
 
 #conditionsheader {
@@ -108,3 +107,32 @@ tbody {
   justify-content: space-between
 }
 
+/* Condition Row */
+
+.hazardBadge {
+  display: inline;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.25em 1em;
+}
+
+.extreme {
+  background-color: #231f20;
+}
+
+.high {
+  background-color: #ed1c24;
+}
+
+.considerable {
+  background-color: #f7941e;
+}
+
+.moderate {
+  background-color: #fff200;
+  color: #030712; /* Tailwind gray 950 */
+}
+
+.low {
+  background-color: #50b848;
+}

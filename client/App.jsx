@@ -22,7 +22,7 @@ const App = () => {
       date: 'March 5th, 2023',
       area: "Steven's Pass",
       problems: [{name: 'Loose Dry', liklihood: 'Possible', aspect:'North, Northwest'}, {name: 'Wet Loose', liklihood: 'Likely', aspect:'South, Southeast'}],
-      hazard: ['Moderate', 'Low', 'Moderate', 'Considerable'],
+      hazard: ['Considerable', 'Low', 'Moderate', 'Considerable'],
       notes: 'Look out for sasquatch',
     },
     {
@@ -39,7 +39,6 @@ const App = () => {
 
   return (
     <div id="appcontainer">
-      <h1>Backcountry Log</h1>
       {renderedContent}
     </div>
   );
