@@ -124,8 +124,8 @@ const AddCondition = (props) => {
           },
         },
       ],
-      hazard: ['Moderate', 'Low', 'Moderate', 'Considerable'],
-      notes: 'Wow, we added a new one!',
+      hazard: hazards,
+      notes: notes,
     };
 
     props.saveAdd(newCondition);
@@ -136,7 +136,7 @@ const AddCondition = (props) => {
       <AddConditionHeader />
       <DateAreaSelector conditionDate={conditionDate} setConditionDate={setConditionDate} area={area} setArea={setArea}/>
       <hr></hr>
-      <HazardPicker />
+      <HazardPicker hazards={hazards} setHazards={setHazards}/>
       <hr></hr>
       <AvalancheProblemsContainer />
       <hr></hr>
