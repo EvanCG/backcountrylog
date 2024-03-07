@@ -8,7 +8,7 @@ const App = () => {
 
   // STATE GOES HERE
   // Are we actively adding a new condition?
-  let addingCondition = true;
+  let addingCondition = false;
   // What is the set of conditions we should currently display for this user?
   const CONDITIONS = [
     {
@@ -38,7 +38,7 @@ const App = () => {
   let renderedContent = addingCondition ? [<AddCondition />] : [<ConditionsContainer conditions={CONDITIONS} />];
 
   return (
-    <div>
+    <div id="appcontainer">
       <h1>Backcountry Log</h1>
       {renderedContent}
     </div>

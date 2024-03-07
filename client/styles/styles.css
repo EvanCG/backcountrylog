@@ -1,7 +1,110 @@
-h1 {
-  color: black;
+
+/* ******************** */
+
+/* General styling for the app
+
+/* ******************** */
+body {
+  background:#f9fafb; /* tailwind gray 50 */
+  color: #1f2937; /* Tailwind gray 800 */
+  font-family: "Inter", sans-serif;
 }
 
-body {
-  background: white;
+
+h1 {
+  color: #030712; /* Tailwind gray 950 */
+  margin: 0;
 }
+
+/* These tags are typically just explanatory text */
+p {
+  color: #374151; /* Tailwind gray 700 */
+}
+
+a {
+  color:  #2563eb; /* Tailwind blue 600 */
+}
+
+button {
+  background-color: #2563eb; /* Tailwind blue 600 */
+  color: white;
+  padding: 0.75em 1em;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+button:hover {
+  background-color: #3b82f6; /* Tailwind blue 500 */
+}
+
+/* ******************** */
+
+/* Table styles
+
+/* ******************** */
+table {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+  padding-bottom: 2em;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5vw;
+  padding-bottom: 0.25em;
+}
+
+td {
+  color: #6b7280; /* tailwind gray 500 */
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.firstcolumn {
+  color: #1f2937; /* Tailwind gray 800 */
+  font-weight: bold;
+}
+
+td > a {
+  text-decoration-line: none;
+}
+
+#headerrow > td {
+  padding: 1em;
+}
+
+tbody > tr {
+  border-top: 1px solid #1f2937; /* Tailwind gray 800 */;
+}
+
+tbody {
+  padding-top: 1em;
+  border-top: 3px solid #1f2937; /* Tailwind gray 800 */;
+}
+
+
+
+/* ******************** */
+
+/* Component-specific styles
+
+/* ******************** */
+
+
+#appcontainer {
+  margin: 2.5%;
+  padding: 2.5%;
+}
+
+
+/* Conditions Header */
+
+#conditionsheader {
+  display: flex;
+  justify-content: space-between
+}
+

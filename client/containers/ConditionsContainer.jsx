@@ -20,16 +20,16 @@ const ConditionsContainer = (props) => {
     <div id="conditionscontainer">
       <ConditionsHeader />
       <table>
-        <tbody>
-          <tr>
+        <thead>
+          <tr id="headerrow">
             <th>Date</th>
             <th>Area</th>
             <th>Avalanche Problem</th>
             <th>Hazard Rating</th>
             <th></th>
           </tr>
-          {conditionsRows}
-        </tbody>
+        </thead>
+        <tbody>{conditionsRows}</tbody>
       </table>
       <button className="addcondition">Add Condition</button>
     </div>
