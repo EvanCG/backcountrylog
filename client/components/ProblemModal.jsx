@@ -15,27 +15,32 @@ const ProblemModal = ({problems, setProblems }) => {
     dialog.showModal();
   };
 
-  /* Doesn't need to do anything */
+  /* Reset state for the components and close the dialog */
   const cancelModal = () => {
+    setProblem(null);
+    setAspect(new AspectCreator());
+    setLikelihood('select');
+
     const dialog = document.getElementById('problemdialog');
     dialog.close();
   };
 
   const saveModal = () => {
+    /* Save the new object */
     let newProblem = {
       name: problem,
       aspect: aspect,
       likelihood: likelihood,
     };
-    
+    /* Save the new version of state */
     let newProblemsArray = problems.slice();
-
     newProblemsArray.push(newProblem);
-
     setProblems(newProblemsArray);
+
+
     
-    const dialog = document.getElementById('problemdialog');
-    dialog.close();
+    /* Close the modal & clear state */
+    cancelModal();
   };
 
   const selectProblem = (problemId) => {
