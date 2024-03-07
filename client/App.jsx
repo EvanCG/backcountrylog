@@ -5,25 +5,7 @@ import ConditionsContainer from './containers/ConditionsContainer';
 import AddCondition from './containers/AddCondition';
 
 const App = () => {
-  // STATE GOES HERE
-  // Are we actively adding a new condition?
-  const [addingCondition, setAddingCondition] = useState(false);
-
-  // What is the set of conditions we should currently display for this user?
-
-  const addCondition = () => {
-    setAddingCondition(true);
-  };
-
-  const cancelAdd = () => {
-    setAddingCondition(false);
-  };
-
-  const saveAdd = () => {
-    // DO SOMETHING WITH STUFF HERE
-    setAddingCondition(false);
-  };
-
+  
   const CONDITIONS = [
     {
       date: 'Mar 6th, 2023',
@@ -63,6 +45,31 @@ const App = () => {
       notes: 'Huge storm, not a good idea to go outside!',
     },
   ];
+  
+  // STATE GOES HERE
+  // Are we actively adding a new condition?
+  const [addingCondition, setAddingCondition] = useState(false);
+  // What is the set of conditions we should currently display for this user?
+  const [conditions, setConditions] = useState(CONDITIONS);
+
+  const addCondition = () => {
+    setAddingCondition(true);
+  };
+
+  const cancelAdd = () => {
+    setAddingCondition(false);
+  };
+
+  const saveAdd = (newCondition) => {
+    // Take the newCondition, and add it to the conditions state object
+    // copy current state
+    let newConditionsArray = conditions.slice();
+    newConditionsArray.unshift(newCondition);
+    setConditions(newConditionsArray);
+    setAddingCondition(false);
+  };
+
+  
 
   // If we're adding a new condition, display that componenet, otherwise display the conditionsContainer
   let renderedContent = addingCondition
@@ -70,7 +77,7 @@ const App = () => {
     : [
         <ConditionsContainer
           addCondition={addCondition}
-          conditions={CONDITIONS}
+          conditions={conditions}
         />,
       ];
 

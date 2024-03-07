@@ -36,6 +36,7 @@ p {
 
 a {
   color:  #2563eb; /* Tailwind blue 600 */
+  cursor: pointer;
 }
 
 button {
@@ -46,6 +47,7 @@ button {
   border-radius: 0.5rem;
   border: none;
   box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 button:hover {
