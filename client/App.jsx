@@ -8,38 +8,38 @@ const App = () => {
   
   const CONDITIONS = [
     {
-      date: 'Mar 6th, 2023',
+      date: 'Mar 6th, 2024',
       area: "Steven's Pass",
       problems: [
         {
           name: 'Wind Slab',
-          liklihood: 'Possible',
+          likelihood: 'Possible',
           aspect: 'North, Northwest',
         },
-        { name: 'Wet Loose', liklihood: 'Likely', aspect: 'South, Southeast' },
+        { name: 'Wet Loose', likelihood: 'Likely', aspect: 'South, Southeast' },
       ],
       hazard: ['Moderate', 'Low', 'Moderate', 'Considerable'],
       notes: 'Pretty awesome day to send it!',
     },
     {
-      date: 'March 5th, 2023',
+      date: 'March 5th, 2024',
       area: "Steven's Pass",
       problems: [
         {
           name: 'Loose Dry',
-          liklihood: 'Possible',
+          likelihood: 'Possible',
           aspect: 'North, Northwest',
         },
-        { name: 'Wet Loose', liklihood: 'Likely', aspect: 'South, Southeast' },
+        { name: 'Wet Loose', likelihood: 'Likely', aspect: 'South, Southeast' },
       ],
       hazard: ['Considerable', 'Low', 'Moderate', 'Considerable'],
       notes: 'Look out for sasquatch',
     },
     {
-      date: 'March 5th, 2023',
+      date: 'March 5th, 2024',
       area: 'West Slopes Central',
       problems: [
-        { name: 'Storm Slab', liklihood: 'Certain', aspect: 'All Aspects' },
+        { name: 'Storm Slab', likelihood: 'Certain', aspect: 'All Aspects' },
       ],
       hazard: ['Extreme', 'Extreme', 'Extreme', 'Extreme'],
       notes: 'Huge storm, not a good idea to go outside!',

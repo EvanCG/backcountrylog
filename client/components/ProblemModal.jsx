@@ -4,7 +4,7 @@ import AspectSelector from './AspectSelector';
 import LikelihoodSelector from './LikelihoodSelector';
 import AspectCreator from './aspectObject';
 
-const ProblemModal = (props) => {
+const ProblemModal = ({problems, setProblems }) => {
   const [problem, setProblem] = useState(null);
   const [aspect, setAspect] = useState(new AspectCreator());
   const [likelihood, setLikelihood] = useState('select');
@@ -22,8 +22,19 @@ const ProblemModal = (props) => {
   };
 
   const saveModal = () => {
+    let newProblem = {
+      name: problem,
+      aspect: aspect,
+      likelihood: likelihood,
+    };
+    
+    let newProblemsArray = problems.slice();
+
+    newProblemsArray.push(newProblem);
+
+    setProblems(newProblemsArray);
+    
     const dialog = document.getElementById('problemdialog');
-    // NEEDS TO DO SOME DATA SAVING HERE
     dialog.close();
   };
 

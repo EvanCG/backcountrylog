@@ -36,7 +36,7 @@ const AvalancheProblemsContainer = ({ problems, setProblems }) => {
         </thead>
         <tbody>{problemRows}</tbody>
       </table>
-      <ProblemModal setProblems={setProblems}/>
+      <ProblemModal problems={problems} setProblems={setProblems}/>
     </div>
   );
 };

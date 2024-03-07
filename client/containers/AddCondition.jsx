@@ -7,78 +7,11 @@ import Notes from '../components/Notes';
 
 const AddCondition = (props) => {
 
-  const tempProblems = [
-    {
-      name: 'Cornice',
-      likelihood: 'Certain',
-      aspect: {
-        store: {
-          'north upper': true,
-          'north middle': true,
-          'north lower': true,
-          'northeast upper': false,
-          'northeast middle': false,
-          'northeast lower': false,
-          'east upper': false,
-          'east middle': false,
-          'east lower': false,
-          'southeast upper': false,
-          'southeast middle': false,
-          'southeast lower': false,
-          'south upper': false,
-          'south middle': false,
-          'south lower': false,
-          'southwest upper': false,
-          'southwest middle': false,
-          'southwest lower': false,
-          'west upper': false,
-          'west middle': false,
-          'west lower': false,
-          'northwest upper': true,
-          'northwest middle': true,
-          'northwest lower': true,
-        },
-      },
-    },
-    {
-      name: 'Wet Loose',
-      likelihood: 'Possible',
-      aspect: {
-        store: {
-          'north upper': false,
-          'north middle': false,
-          'north lower': false,
-          'northeast upper': false,
-          'northeast middle': false,
-          'northeast lower': false,
-          'east upper': false,
-          'east middle': false,
-          'east lower': false,
-          'southeast upper': true,
-          'southeast middle': true,
-          'southeast lower': true,
-          'south upper': true,
-          'south middle': true,
-          'south lower': true,
-          'southwest upper': true,
-          'southwest middle': true,
-          'southwest lower': true,
-          'west upper': false,
-          'west middle': false,
-          'west lower': false,
-          'northwest upper': false,
-          'northwest middle': false,
-          'northwest lower': false,
-        },
-      },
-    },
-  ]
-
 
   // Logic to conditionally display the add new problem screens
   const [conditionDate, setConditionDate] = useState('');
   const [area, setArea] = useState('select');
-  const [problems, setProblems] = useState(tempProblems);
+  const [problems, setProblems] = useState([]);
   const [hazards, setHazards] = useState([
     'select',
     'select',
@@ -132,72 +65,7 @@ const AddCondition = (props) => {
     let newCondition = {
       date: formattedDate,
       area: area,
-      problems: [
-        {
-          name: 'cornice',
-          likelihood: 'certain',
-          aspect: {
-            store: {
-              'north upper': true,
-              'north middle': true,
-              'north lower': true,
-              'northeast upper': false,
-              'northeast middle': false,
-              'northeast lower': false,
-              'east upper': false,
-              'east middle': false,
-              'east lower': false,
-              'southeast upper': false,
-              'southeast middle': false,
-              'southeast lower': false,
-              'south upper': false,
-              'south middle': false,
-              'south lower': false,
-              'southwest upper': false,
-              'southwest middle': false,
-              'southwest lower': false,
-              'west upper': false,
-              'west middle': false,
-              'west lower': false,
-              'northwest upper': true,
-              'northwest middle': true,
-              'northwest lower': true,
-            },
-          },
-        },
-        {
-          name: 'wetloose',
-          e: 'possible',
-          aspect: {
-            store: {
-              'north upper': true,
-              'north middle': true,
-              'north lower': true,
-              'northeast upper': true,
-              'northeast middle': true,
-              'northeast lower': true,
-              'east upper': true,
-              'east middle': true,
-              'east lower': true,
-              'southeast upper': false,
-              'southeast middle': false,
-              'southeast lower': false,
-              'south upper': false,
-              'south middle': false,
-              'south lower': false,
-              'southwest upper': false,
-              'southwest middle': false,
-              'southwest lower': false,
-              'west upper': false,
-              'west middle': false,
-              'west lower': false,
-              'northwest upper': true,
-              'northwest middle': true,
-              'northwest lower': true,
-            },
-          },
-        },
-      ],
+      problems: problems,
       hazard: hazards,
       notes: notes,
     };
