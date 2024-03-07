@@ -1,5 +1,6 @@
 import React from 'react';
-import ConditionRow from './ConditionRow';
+import ConditionRow from '../components/ConditionRow';
+import ConditionsHeader from '../components/ConditionsHeader';
 
 const ConditionsContainer = (props) => {
   let conditionsRows = props.conditions.map((condition, index) => {
@@ -17,6 +18,7 @@ const ConditionsContainer = (props) => {
 
   return (
     <div id="conditionscontainer">
+      <ConditionsHeader />
       <table>
         <tbody>
           <tr>
