@@ -263,7 +263,7 @@ dialog {
   max-width: 100%;
 }
 
-.problemCard {
+.problemcard {
   border: 1px solid black;
   margin: 1em;
   border-radius: 1em;;
@@ -272,6 +272,11 @@ dialog {
   align-items: center;
   border: 2px solid #6b7280; /* tailwind gray 500 */
   box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.problemselection {
+  background-color: #e5e7eb; /* tailwind gray 200 */
 }
 
 #dryloose {
@@ -309,4 +314,4 @@ dialog {
 #glide {
   grid-area: glide;
 }
-        
+
