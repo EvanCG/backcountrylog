@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AddConditionHeader from '../components/AddConditionHeader';
 import DateAreaSelector from '../components/DateAreaSelector';
 import HazardPicker from '../components/HazardPicker';
@@ -7,15 +7,57 @@ import Notes from '../components/Notes';
 
 const AddCondition = (props) => {
   // Logic to conditionally display the add new problem screens
-
-  // logic for constructing the state of a particular condition
+  const [conditionDate, setConditionDate] = useState('');
+  const [area, setArea] = useState('select');
+  const [problems, setProblems] = useState([]);
+  const [hazards, setHazards] = useState(['select', 'select', 'select', 'select']);
+  const [notes, setNotes] = useState('');
 
   const addNewCondition = () => {
     // grab all of the state in newCondition, and call props.saveAdd
 
+    // Format the date to be more attractive (thanks chatgpt for some help!)
+    const getDaySuffix = (day) => {
+      if (day >= 11 && day <= 13) {
+        return 'th';
+      }
+      switch (day % 10) {
+        case 1:
+          return 'st';
+        case 2:
+          return 'nd';
+        case 3:
+          return 'rd';
+        default:
+          return 'th';
+      }
+    };
+
+    /* HACK - THIS WILL ONLY WORK IN SEATTLE IN PST!!!! */
+    const myDate = new Date(conditionDate.concat(' PST'));
+    const monthNames = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    const month = monthNames[myDate.getMonth()];
+    const day = myDate.getDate();
+    const daySuffix = getDaySuffix(day);
+
+    const formattedDate = `${month} ${day}${daySuffix}, ${myDate.getFullYear()}`
+
     let newCondition = {
-      date: 'Mar 7th, 2023',
-      area: 'West Slopes Central',
+      date: formattedDate,
+      area: area,
       problems: [
         {
           name: 'cornice',
@@ -92,7 +134,7 @@ const AddCondition = (props) => {
   return (
     <div>
       <AddConditionHeader />
-      <DateAreaSelector />
+      <DateAreaSelector conditionDate={conditionDate} setConditionDate={setConditionDate} area={area} setArea={setArea}/>
       <hr></hr>
       <HazardPicker />
       <hr></hr>

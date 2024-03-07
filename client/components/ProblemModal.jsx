@@ -44,8 +44,6 @@ const ProblemModal = (props) => {
     setAspect(newAspect);
   }
 
-  console.log('This is the aspect object: ', aspect);
-
   return (
     <div>
       <button id="addaproblem" onClick={() => openModal()}>

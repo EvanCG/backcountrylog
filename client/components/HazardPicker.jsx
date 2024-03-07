@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const HazardPicker = (props) => {
+const HazardPicker = ({conditionDate, setConditionDate, area, setArea}) => {
   const [hazardSelect, setHazardSelect] = useState(['select', 'select', 'select', 'select']);
 
   const hazardColorClick = () => {
