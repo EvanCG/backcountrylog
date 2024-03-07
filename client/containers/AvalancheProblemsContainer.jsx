@@ -1,4 +1,5 @@
 import React from 'react';
+import ProblemModal from '../components/ProblemModal';
 
 const AvalancheProblemsContainer = (props) => {
 
@@ -19,7 +20,7 @@ const AvalancheProblemsContainer = (props) => {
           {problemRows}
         </tbody>
       </table>
-      <button id="addaproblem">Add a Problem</button>
+      <ProblemModal />
     </div>
   );
 };

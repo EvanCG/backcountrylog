@@ -23,7 +23,7 @@ const AddCondition = (props) => {
       <hr></hr>
       <Notes />
       <hr></hr>
-      <div id="addconditionfooter">
+      <div id="addconditionfooter" className="cancelbuttoncombo">
         <div><a className="cancellink" href="#">Cancel</a></div>
         <button>Save</button>
       </div>

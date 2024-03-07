@@ -194,10 +194,11 @@ select {
 #note {
   height: 7vw;
   text-wrap: wrap;
+  width: 100%;
 }
 
 /* AddCondition */
-#addconditionfooter {
+.cancelbuttoncombo {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -212,3 +213,97 @@ select {
   text-decoration: underline;
 }
 
+/* Add problem modal dialog */
+
+dialog {
+  width: 80%;
+  margin-top: 5%;
+}
+
+#dialogcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+::backdrop {
+  background-color: white;
+  opacity: 0.75;
+}
+
+#aspectselector {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+#eastwestcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#likelihoodpicker {
+  width: 40%;
+}
+
+/* Problem Selector */
+#problemsContainer {
+  display: grid;
+  grid-template: repeat(3, 1fr);
+  grid-template-areas:
+    "dryloose stormslab windslab"
+    "cornice wetloose wetslab"
+    "persistentslab deepslab glide";
+  max-width: 100%;
+}
+
+.problemCard {
+  border: 1px solid black;
+  margin: 1em;
+  border-radius: 1em;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #6b7280; /* tailwind gray 500 */
+  box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+}
+
+#dryloose {
+  grid-area: dryloose;
+}
+
+#stormslab {
+  grid-area: stormslab;
+}
+
+#windslab {
+  grid-area: windslab;
+}
+
+#cornice {
+  grid-area: cornice
+}
+
+#wetloose {
+  grid-area: wetloose;
+}
+
+#wetslab {
+  grid-area: wetslab;
+}
+
+#persistentslab {
+  grid-area: persistentslab;
+}
+
+#deepslab {
+  grid-area: deepslab;
+}
+
+#glide {
+  grid-area: glide;
+}
+        
