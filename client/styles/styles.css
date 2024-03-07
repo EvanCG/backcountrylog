@@ -236,15 +236,14 @@ dialog {
   opacity: 0.75;
 }
 
-#aspectselector {
+#aspectselector, .aspectstatic {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
 }
 
-#eastwestcontainer {
+.eastwestcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,6 +288,17 @@ path {
 /* If selected, make it colored */
 .aspectselection {
   fill: #d1d5db; /* tailwind gray 300 */
+}
+
+.aspectstatictd {
+  height: 30%;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.aspectstatic h5 {
+  margin: 0.25em;
 }
 
 #dryloose {

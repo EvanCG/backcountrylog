@@ -1,37 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-const AspectSelector = (props) => {
-
+const AspectStatic = ({aspect, idKey}) => {
 
   useEffect(() => {
-    for(const path in props.aspect.store) {
-      const currPath = document.querySelector(`#aspectselector path[data-id="${path}"]`);
+    for(const path in aspect.store) {
+      const currPath = document.querySelector(`#${idKey} path[data-id="${path}"]`);
 
-      // add onclick for each
-      currPath.onclick = () => {
-        props.selectAspect(path);
-      }
-      if (props.aspect.store[path]) {
+      if (aspect.store[path]) {
         // currPath.style.fill = '#e5e7eb'; /* tailwind gray 200 */
         currPath.classList.add('aspectselection');
       } else {
         currPath.classList.remove('aspectselection');
       }
     }
-  }, [props.aspect]);
-
-
-  
-
+  }, [aspect]);
 
 
   return (
-    <div>
-      <h4>On what aspect and elevation is the problem occuring?</h4>
-      <div id="aspectselector">
-        <h5>NORTH</h5>
+    <div className="aspectstatic" id={idKey}>
+        <h5>N</h5>
         <div className="eastwestcontainer">
-          <h5>WEST</h5>
+          <h5>W</h5>
           <svg
             width="100%"
             height="100%"
@@ -240,12 +229,11 @@ const AspectSelector = (props) => {
               }}
             ></path>
           </svg>
-          <h5>EAST</h5>
+          <h5>E</h5>
         </div>
-        <h5>SOUTH</h5>
+        <h5>S</h5>
       </div>
-    </div>
   );
-};
+}
 
-export default AspectSelector;
+export default AspectStatic;
