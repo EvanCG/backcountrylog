@@ -9,11 +9,11 @@ const Notes = ({notes, setNotes}) => {
 
   return (
     <div>
-      <h3>Weather Patterns & Notes:</h3>
+      <h3>Weather Patterns & Notes</h3>
       <div className="labelgroup">
         <label for="note">
           What is the primary take away from today's observation, and anuy other
-          key notes to remember:
+          key notes to remember:<span className="requiredSpan">*</span>
         </label>
         <textarea name="note" id="note" value={notes} onChange={() => updateNotes()}></textarea>
       </div>

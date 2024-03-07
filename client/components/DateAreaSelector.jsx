@@ -17,10 +17,10 @@ const DateAreaSelector = ({
 
   return (
     <div className="dateandareaselector">
-      <h3>Create a record of conditions for a particular date and place:</h3>
+      <h3>Create a record of conditions for a particular date and place</h3>
       <div className="horizontalinput">
         <div className="labelgroup">
-          <label for="date">Date:</label>
+          <label for="date">Date:<span className="requiredSpan">*</span></label>
           <input
             type="date"
             name="date"
@@ -30,7 +30,7 @@ const DateAreaSelector = ({
           />
         </div>
         <div className="labelgroup">
-          <label for="area">Area:</label>
+          <label for="area">Area:<span className="requiredSpan">*</span></label>
           <select
             id="area"
             name="area"

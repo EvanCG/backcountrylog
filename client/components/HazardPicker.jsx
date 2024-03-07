@@ -18,7 +18,7 @@ const HazardPicker = ({hazards, setHazards}) => {
       <h3>What is the overall hazard for the day?</h3>
       <div className="horizontalinput">
         <div className="hazPicker labelgroup" id="overallHazard">
-          <label for="overallPicker">Overall:</label>
+          <label for="overallPicker">Overall:<span className="requiredSpan">*</span></label>
           <select className={hazards[0].toLowerCase()} id="overallPicker" name="overallPicker" value={hazards[0]} onChange={() => hazardColorClick()}>
             <option disabled value="select">
               -- Select Hazard --
@@ -41,7 +41,7 @@ const HazardPicker = ({hazards, setHazards}) => {
           </select>
         </div>
         <div className="hazPicker labelgroup" id="lowerHazard">
-          <label for="lowerPicker">Lower Elevation:</label>
+          <label for="lowerPicker">Lower Elevation:<span className="requiredSpan">*</span></label>
           <select className={hazards[1].toLowerCase()} id="lowerPicker" name="lowerPicker" value={hazards[1]} onChange={() => hazardColorClick()}>
             <option disabled value="select">
               -- Select Hazard --
@@ -64,7 +64,7 @@ const HazardPicker = ({hazards, setHazards}) => {
           </select>
         </div>
         <div className="hazPicker labelgroup" id="middleHazard">
-          <label for="middlePicker">Middle Elevation</label>
+          <label for="middlePicker">Middle Elevation:<span className="requiredSpan">*</span></label>
           <select className={hazards[2].toLowerCase()} id="middlePicker" name="middlePicker" value={hazards[2]} onChange={() => hazardColorClick()}>
             <option disabled value="select">
               -- Select Hazard --
@@ -87,7 +87,7 @@ const HazardPicker = ({hazards, setHazards}) => {
           </select>
         </div>
         <div className="hazPicker labelgroup" id="upperHazard">
-          <label for="upperPicker">Upper Elevation:</label>
+          <label for="upperPicker">Upper Elevation:<span className="requiredSpan">*</span></label>
           <select className={hazards[3].toLowerCase()} id="upperPicker" name="upperPicker" value={hazards[3]} onChange={() => hazardColorClick()}>
             <option disabled value="select">
               -- Select Hazard --
